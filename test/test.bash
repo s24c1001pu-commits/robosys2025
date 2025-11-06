@@ -1,8 +1,17 @@
-#!/bin/bash
-# 正常入力のテスト
-out=$(seq 5 | ./minus)
-[ "$out" = "-15" ] || { echo "test failed: expected -15, got $out"; exit 1; }
+#!/bin/bash -xv
 
-# 異常入力のテスト（数字でない入力）
-out=$(echo あ | ./minus)
-[ "$?" != "0" ] && echo "passed error test"
+### 著作権やライセンスの設定をここに
+
+ng () {
+    echo "${1}行目が違うよ"
+    res=1
+}
+
+res=0
+
+out=$(seq 5 | ./plus)
+[ "${out}" = 15 ] || ng "$LINENO"
+
+[ "${res}" = 0 ] && echo OK
+exit $res
+
