@@ -9,7 +9,7 @@ ng () {
 
 res=0
 
-out=$(seq 5 | bash ./plus)
+out=$(seq 5 | python3 ./plus)
 [ "${out}" = 15 ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
