@@ -5,17 +5,80 @@
 
 © 2025 Ryuichi Ueda
 
-## 利用しているライブラリや資料
+## 説明
 
-- <https://ryuichiueda.github.io/slides_marp/robosys2025/lesson4.html>由来のコード（© 2025 plus_stdin）- © 2025 Ryuichi Ueda
-- このパッケージのコードは、下記スライド（CC-BY-SA 4.0 by Ryuichi Ueda）の内容を
-  本人の許可を得て利用しています。
-- <https://github.com/ryuichiueda/slides_marp/tree/master/prob_robotics_2025>
+`kadai` コマンドは、指定したファイルや標準入力の**文字数をカウント**するシンプルなツールです。  
+---
+
+## ライセンスおよび著作権
+
+- このソフトウェアパッケージは、**3条項BSDライセンス（BSD-3-Clause）** の下、再頒布および使用が許可されています。
+- © 2025 Takuto
+
+## 利用しているライブラリ・コード・ドキュメント
+
+- このパッケージは、講義資料  
+  **「ロボットシステム学 2025」**  
+  に掲載されているコードおよび構成を参考にしています。
+- 講義資料は、下記スライド（**CC-BY-SA 4.0 by Ryuichi Ueda**）として公開されています。
+  - [ryuichiueda/slides_marp robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+- 本パッケージに含まれるコードは、上記資料を参考にしつつ、**内容を理解した上で自分自身の著作として作成したもの**です。
+- 参考にした資料・コードの著作権は **Ryuichi Ueda 氏** に帰属します。
+
+標準入力にも対応しているため、パイプを利用したテキスト処理の一部としても利用できます。
+
+## 特徴
+
+- ファイル入力、標準入力の両方に対応
+- 結果は標準出力に文字数のみ表示
+- シンプルで便利な文字数カウント
+
+## インストールの手順
+
+1. このリポジトリをクローン  
+```bash
+
+$ git clone https://github.com/s24c1001pu-commits/robosys2025.git
+$ cd robosys2025
+
+2. 実行権限を付与
+
+$ chmod +x kadai
+
+# 使用例
+
+標準入力から文字数をカウント
+
+$ echo "hello world" | ./kadai
+文字数: 11
+
+ファイルから文字数をカウント
+
+$ ./kadai test.txt
+文字数: 42
+
+
+#テスト
+
+GitHub Actions による自動テストを設定済みです。ローカルでも以下で確認可能です。
+
+$ ./test/test_kadai.bats
 
 ---
 
-## 参考リンク
+## ライセンスおよび著作権
 
-- [GPL 3.0 ライセンス全文](https://www.gnu.org/licenses/gpl-3.0.txt)
+- このソフトウェアパッケージは、**3条項BSDライセンス（BSD-3-Clause）** の下、再頒布および使用が許可されています。
+- © 2025 Takuto
 
-# test run
+## 利用しているライブラリ・コード・ドキュメント
+
+- このパッケージは、講義資料  
+  **「ロボットシステム学 2025」**  
+  に掲載されているコードおよび構成を参考にしています。
+- 講義資料は、下記スライド（**CC-BY-SA 4.0 by Ryuichi Ueda**）として公開されています。
+  - [ryuichiueda/slides_marp robosys_2025](https://github.com/ryuichiueda/slides_marp/tree/master/robosys2025)
+- 本パッケージに含まれるコードは、上記資料を参考にしつつ、**内容を理解した上で自分自身の著作として作成したもの**です。
+- 参考にした資料・コードの著作権は **Ryuichi Ueda 氏** に帰属します。
+
+
