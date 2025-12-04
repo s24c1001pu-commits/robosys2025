@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>mypkg</name>
+  <version>0.0.0</version>
+  <description>a package for practice</description>
+
+  <maintainer email="s24C1001pu@s.chibakoudai.jp">takuto</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <!-- Python パッケージの唯一の正解 -->
+  <buildtool_depend>ament_python</buildtool_depend>
+  <exec_depend>rclpy</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# ROS2 build
+build/
+install/
+log/
+
+# Editor
+*.swp
+*.swo
+
